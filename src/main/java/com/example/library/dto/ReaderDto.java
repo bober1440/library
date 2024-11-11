@@ -8,11 +8,11 @@ public class ReaderDto {
     private String lastName;
     private LocalDate accountCreated;
 
-    // Konstruktor bezparametrowy
+
     public ReaderDto() {
     }
 
-    // Konstruktor z parametrami
+
     public ReaderDto(Long id, String firstName, String lastName, LocalDate accountCreated) {
         this.id = id;
         this.firstName = firstName;
@@ -20,7 +20,7 @@ public class ReaderDto {
         this.accountCreated = accountCreated;
     }
 
-    // Gettery i settery
+
     public Long getId() {
         return id;
     }

@@ -9,11 +9,11 @@ public class BorrowingDto {
     private LocalDate borrowedDate;
     private LocalDate returnedDate;
 
-    // Konstruktor bezparametrowy
+
     public BorrowingDto() {
     }
 
-    // Konstruktor z parametrami
+
     public BorrowingDto(Long id, Long bookCopyId, Long readerId, LocalDate borrowedDate, LocalDate returnedDate) {
         this.id = id;
         this.bookCopyId = bookCopyId;
@@ -22,7 +22,7 @@ public class BorrowingDto {
         this.returnedDate = returnedDate;
     }
 
-    // Gettery i settery
+
     public Long getId() {
         return id;
     }

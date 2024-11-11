@@ -20,22 +20,21 @@ public class TitleService {
         this.titleRepository = titleRepository;
     }
 
-    // Dodanie nowego tytułu
+
     public Title saveTitle(Title title) {
         return titleRepository.save(title);
     }
 
-    // Pobranie tytułu na podstawie ID
+
     public Optional<Title> getTitle(Long id) {
         return titleRepository.findById(id);
     }
 
-    // Pobranie wszystkich tytułów
+
     public List<Title> getAllTitles() {
         return (List<Title>) titleRepository.findAll();
     }
 
-    // Usunięcie tytułu na podstawie ID
     public void deleteTitle(Long id) {
         titleRepository.deleteById(id);
     }

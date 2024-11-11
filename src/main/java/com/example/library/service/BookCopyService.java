@@ -24,12 +24,12 @@ public class BookCopyService {
         this.titleRepository = titleRepository;
     }
 
-    // Dodanie nowego egzemplarza książki
+
     public BookCopy saveBookCopy(BookCopy bookCopy) {
         return bookCopyRepository.save(bookCopy);
     }
 
-    // Zmiana statusu egzemplarza na podstawie ID
+
     public void updateStatus(Long id, String status) {
         BookCopy bookCopy = bookCopyRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid book copy ID: " + id));
@@ -37,14 +37,14 @@ public class BookCopyService {
         bookCopyRepository.save(bookCopy);
     }
 
-    // Liczenie dostępnych egzemplarzy dla danego tytułu
+
     public long countAvailableCopies(Long titleId) {
         Title title = titleRepository.findById(titleId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid title ID: " + titleId));
         return bookCopyRepository.findByTitleAndStatus(title, "available").size();
     }
 
-    // Pobranie egzemplarza na podstawie ID
+
     public Optional<BookCopy> getBookCopy(Long id) {
         return bookCopyRepository.findById(id);
     }

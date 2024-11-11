@@ -6,11 +6,11 @@ public class TitleDto {
     private String author;
     private int yearPublished;
 
-    // Konstruktor bezparametrowy
+
     public TitleDto() {
     }
 
-    // Konstruktor z parametrami
+
     public TitleDto(Long id, String title, String author, int yearPublished) {
         this.id = id;
         this.title = title;
@@ -18,7 +18,7 @@ public class TitleDto {
         this.yearPublished = yearPublished;
     }
 
-    // Gettery i settery
+
     public Long getId() {
         return id;
     }

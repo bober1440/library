@@ -18,18 +18,18 @@ public class BookCopy {
 
     private String status;
 
-    // Konstruktor bezparametrowy
+
     public BookCopy() {
     }
 
-    // Konstruktor z parametrami
+
     public BookCopy(Long id, Title title, String status) {
         this.id = id;
         this.title = title;
         this.status = status;
     }
 
-    // Gettery i settery
+
     public Long getId() {
         return id;
     }
@@ -54,7 +54,7 @@ public class BookCopy {
         this.status = status;
     }
 
-    // Metody equals i hashCode
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -27,11 +27,11 @@ public class Borrowing {
     @Column(name = "returned_date")
     private LocalDate returnedDate;
 
-    // Konstruktor bezparametrowy
+
     public Borrowing() {
     }
 
-    // Konstruktor z parametrami
+
     public Borrowing(Long id, BookCopy bookCopy, Reader reader, LocalDate borrowedDate, LocalDate returnedDate) {
         this.id = id;
         this.bookCopy = bookCopy;
@@ -40,7 +40,7 @@ public class Borrowing {
         this.returnedDate = returnedDate;
     }
 
-    // Gettery i settery
+
     public Long getId() {
         return id;
     }
@@ -81,7 +81,7 @@ public class Borrowing {
         this.returnedDate = returnedDate;
     }
 
-    // Metody equals i hashCode
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

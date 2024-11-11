@@ -64,7 +64,7 @@ public class Title {
         this.yearPublished = yearPublished;
     }
 
-    // Metody equals i hashCode
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -5,18 +5,18 @@ public class BookCopyDto {
     private Long titleId;
     private String status;
 
-    // Konstruktor bezparametrowy
+
     public BookCopyDto() {
     }
 
-    // Konstruktor z parametrami
+
     public BookCopyDto(Long id, Long titleId, String status) {
         this.id = id;
         this.titleId = titleId;
         this.status = status;
     }
 
-    // Gettery i settery
+
     public Long getId() {
         return id;
     }

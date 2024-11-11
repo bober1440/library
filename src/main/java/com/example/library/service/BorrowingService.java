@@ -31,7 +31,7 @@ public class BorrowingService {
         this.readerRepository = readerRepository;
     }
 
-    // Wypożyczenie książki
+
     public Borrowing borrowBook(Borrowing borrowing) {
         BookCopy bookCopy = borrowing.getBookCopy();
         if (!"available".equals(bookCopy.getStatus())) {
@@ -44,7 +44,7 @@ public class BorrowingService {
         return borrowingRepository.save(borrowing);
     }
 
-    // Zwrot książki
+
     public void returnBook(Long id) {
         Borrowing borrowing = borrowingRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid borrowing ID: " + id));
@@ -56,12 +56,12 @@ public class BorrowingService {
         borrowingRepository.save(borrowing);
     }
 
-    // Pobranie wypożyczenia na podstawie ID
+
     public Optional<Borrowing> getBorrowing(Long id) {
         return borrowingRepository.findById(id);
     }
 
-    // Pobranie wszystkich wypożyczeń dla danego czytelnika
+
     public List<Borrowing> getActiveBorrowingsByReader(Reader reader) {
         return borrowingRepository.findByReaderAndReturnedDateIsNull(reader);
     }
