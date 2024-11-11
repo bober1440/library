@@ -161,7 +161,7 @@ public class LibraryTestSuite {
         List<Borrowing> activeBorrowings = borrowingService.getActiveBorrowingsByReader(reader);
 
         // Then
-        assertEquals(2, activeBorrowings.size()); // Powinien być tylko jeden aktywny
+        assertEquals(2, activeBorrowings.size());
         assertEquals(bookCopy1.getId(), activeBorrowings.get(0).getBookCopy().getId());
     }
 }
