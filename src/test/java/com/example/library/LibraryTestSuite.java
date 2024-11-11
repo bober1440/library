@@ -129,7 +129,7 @@ public class LibraryTestSuite {
         // When
         borrowingService.returnBook(savedBorrowing.getId());
 
-        // Then - sprawdzenie zwrotu
+        // Then
         retrievedBorrowing = borrowingService.getBorrowing(savedBorrowing.getId());
         assertTrue(retrievedBorrowing.isPresent());
         assertEquals("available", retrievedBorrowing.get().getBookCopy().getStatus());
